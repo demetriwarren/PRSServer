@@ -89,7 +89,7 @@ namespace PRSServer.Controllers
 
         // GET: api/Requests/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Request>> GetRequestById(int id)
+        public async Task<ActionResult<Request>> GetRequest(int id)
         {
             
             //include statement for products and request line

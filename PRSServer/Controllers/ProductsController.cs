@@ -36,7 +36,7 @@ namespace PRSServer.Controllers
 
         // GET: api/Products/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Product>> GetProductById(int id)
+        public async Task<ActionResult<Product>> GetProduct(int id)
         {
             var product = await _context.Product.Include(x => x.Vendor).SingleOrDefaultAsync(x => x.Id == id);
 

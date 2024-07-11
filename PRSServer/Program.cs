@@ -15,12 +15,13 @@ namespace PRSServer
             // Add services to the container.
 
             builder.Services.AddControllers();
+            builder.Services.AddCors();
 
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
 
-            app.UseCors();
+            app.UseCors(x => x.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
             app.UseAuthorization();
 
 
