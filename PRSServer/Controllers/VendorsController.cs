@@ -21,8 +21,14 @@ namespace PRSServer.Controllers
             _context = context;
         }
 
-        // GET: api/Vendors
-        [HttpGet]
+        //[HttpGet("po/{vendorId}")]
+        //public async Task<ActionResult<Po> CreatePo(int vendorId)
+        //    {
+               
+        //    }
+
+    // GET: api/Vendors
+    [HttpGet]
         public async Task<ActionResult<IEnumerable<Vendor>>> GetVendor()
         {
             return await _context.Vendor.ToListAsync();
